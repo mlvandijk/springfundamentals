@@ -2,12 +2,14 @@ package com.pluralsight.service;
 
 import com.pluralsight.model.Customer;
 import com.pluralsight.repository.CustomerRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
 // This is where your business logic will reside
 public class CustomerServiceImpl implements CustomerService {
 
+    @Autowired
     private CustomerRepository customerRepository;
 
     public CustomerServiceImpl(){
