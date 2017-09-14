@@ -17,4 +17,9 @@ public class CustomerServiceImpl implements CustomerService {
     public List<Customer> findAll(){
         return customerRepository.findAll(); // hardcoded reference to out repository
     }
+
+    @Autowired
+    public void setCustomerRepository(CustomerRepository customerRepository) {
+        this.customerRepository = customerRepository;
+    }
 }
