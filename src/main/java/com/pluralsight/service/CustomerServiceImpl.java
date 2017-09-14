@@ -3,10 +3,11 @@ package com.pluralsight.service;
 import com.pluralsight.model.Customer;
 import com.pluralsight.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-// This is where your business logic will reside
+@Service("customerService")
 public class CustomerServiceImpl implements CustomerService {
 
 
