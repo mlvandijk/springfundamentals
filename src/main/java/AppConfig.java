@@ -12,8 +12,9 @@ public class AppConfig {
 
     @Bean(name = "customerService") // follows bean naming convention
     public CustomerService getCustomerService(){
-        CustomerServiceImpl service = new CustomerServiceImpl(getCustomerRepository());
-//        service.setCustomerRepository(getCustomerRepository());
+//        CustomerServiceImpl service = new CustomerServiceImpl(getCustomerRepository());
+        CustomerServiceImpl service = new CustomerServiceImpl();
+        service.setCustomerRepository(getCustomerRepository());
         return service;
     }
 
