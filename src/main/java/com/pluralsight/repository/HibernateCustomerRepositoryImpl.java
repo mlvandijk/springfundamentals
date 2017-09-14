@@ -15,6 +15,8 @@ public class HibernateCustomerRepositoryImpl implements CustomerRepository {
         customer.setFirstName("Marit");
         customer.setLastName("van Dijk");
 
+        customers.add(customer);
+
         return customers;
     }
 }
