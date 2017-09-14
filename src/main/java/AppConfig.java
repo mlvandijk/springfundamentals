@@ -1,3 +1,5 @@
+import com.pluralsight.repository.CustomerRepository;
+import com.pluralsight.repository.HibernateCustomerRepositoryImpl;
 import com.pluralsight.service.CustomerService;
 import com.pluralsight.service.CustomerServiceImpl;
 import org.springframework.context.annotation.Bean;
@@ -8,7 +10,14 @@ public class AppConfig {
 
     @Bean(name = "customerService") // follows bean naming convention
     public CustomerService getCustomerService(){
-        return new CustomerServiceImpl();
+        CustomerServiceImpl service = new CustomerServiceImpl();
+        service.setCustomerRepository(getCustomerRepository());
+        return service;
+    }
+
+    @Bean(name = "customerRepository")
+    public CustomerRepository getCustomerRepository() {
+        return new HibernateCustomerRepositoryImpl();
     }
 
 }
