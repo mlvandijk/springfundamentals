@@ -9,7 +9,7 @@ import java.util.List;
 // This is where your business logic will reside
 public class CustomerServiceImpl implements CustomerService {
 
-    @Autowired
+
     private CustomerRepository customerRepository;
 
     public CustomerServiceImpl(){
@@ -26,6 +26,7 @@ public class CustomerServiceImpl implements CustomerService {
         return customerRepository.findAll(); // hardcoded reference to out repository
     }
 
+    @Autowired
     public void setCustomerRepository(CustomerRepository customerRepository) {
         System.out.println("We're using setter injection");
         this.customerRepository = customerRepository;
