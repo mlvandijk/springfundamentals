@@ -7,7 +7,7 @@
           class="com.pluralsight.repository.HibernateCustomerRepositoryImpl"/>
 
     <bean name="customerService"
-          class="com.pluralsight.service.CustomerServiceImpl" autowire="constructor">
+          class="com.pluralsight.service.CustomerServiceImpl" autowire="byType">
         <!--<constructor-arg index="0" ref="customerRepository" />-->
     </bean>
 

@@ -21,7 +21,7 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public List<Customer> findAll(){
-        return customerRepository.findAll(); // hardcoded reference to out repository
+        return customerRepository.findAll();
     }
 
     public void setCustomerRepository(CustomerRepository customerRepository) {
