@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 public class AppConfig {
 
     @Bean(name = "customerService") // follows bean naming convention
-    public CustomerService getCustomerSerivce(){
+    public CustomerService getCustomerService(){
         return new CustomerServiceImpl();
     }
 
