@@ -13,7 +13,7 @@
     <bean name="customerService"
           class="com.pluralsight.service.CustomerServiceImpl"
           autowire="byType"
-          scope="singleton" >
+          scope="prototype" >
     </bean>
 
 </beans>
