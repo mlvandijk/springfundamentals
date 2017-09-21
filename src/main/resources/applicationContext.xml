@@ -7,8 +7,13 @@
        http://www.springframework.org/schema/context
        http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:annotation-config/>
+    <bean name="customerRepository"
+          class="com.pluralsight.repository.HibernateCustomerRepositoryImpl" />
 
-    <context:component-scan base-package="com.pluralsight"/>
+    <bean name="customerService"
+          class="com.pluralsight.service.CustomerServiceImpl"
+          autowire="byType"
+          scope="singleton" >
+    </bean>
 
 </beans>
