@@ -9,8 +9,11 @@ import java.util.List;
 @Repository("customerRepository") // defined as customerRepository bean
 public class HibernateCustomerRepositoryImpl implements CustomerRepository {
 
+    private String dbUsername;
+
     @Override
     public List<Customer> findAll() {
+        System.out.println(dbUsername);
         List<Customer> customers = new ArrayList<>();
 
         Customer customer = new Customer();
@@ -20,5 +23,9 @@ public class HibernateCustomerRepositoryImpl implements CustomerRepository {
         customers.add(customer);
 
         return customers;
+    }
+
+    public void setDbUsername(String dbUsername) {
+        this.dbUsername = dbUsername;
     }
 }
