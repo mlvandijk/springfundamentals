@@ -10,7 +10,8 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service("customerService")
-@Scope("singleton") // Alternatively, use: ConfigurableBeanFactory.SCOPE_SINGLETON (You can also create your own Enum)
+//@Scope("singleton") // Alternatively, use: ConfigurableBeanFactory.SCOPE_SINGLETON (You can also create your own Enum)
+@Scope("prototype")
 public class CustomerServiceImpl implements CustomerService {
 
 
